@@ -7,7 +7,7 @@ author: kuga
 
 一直以来，安装和配置环境都是很费时间的，虽然大多是重复的劳动，
 但报错又总是层出不穷，不按套路出招，几个小时很快就过去了，
-自己写的部署脚本也是不现实的，没有标准还不通用，往往就成了一次性脚本，
+自己写部署脚本也不太现实，没有标准还不通用，往往就成了一次性脚本，
 另外又不是很懂一些专业的运维工具，狗带的心都有了 :(
 
 就在这时，Docker 这货跑过来说：哥可是一次编写，到处部署，要不要试试？
@@ -15,16 +15,15 @@ author: kuga
 
 那好吧，总得先装一下吧...？
 
-和官网重复的部分就不说了，下面主要说一下网络不太行的问题。
+和官网重复的部分就不说了，下面主要说下如何从 DaoCloud 中安装。
 
-从 DaoCloud 安装
-----------------
-
-##### Mac
+## Mac
+------
 
 Mac 的话直接从官网下载 dmg 文件安装就好了，总感觉 Docker 很重视 Mac。
 
-##### Ubuntu
+## Ubuntu
+---------
 
 安装 Docker 官方的最新发行版， 支持 Ubuntu 12.04 以上版本
 
@@ -34,7 +33,8 @@ Mac 的话直接从官网下载 dmg 文件安装就好了，总感觉 Docker 很
 
     sudo service docker status
 
-##### Centos
+## Centos
+---------
 
 安装 Docker 官方的最新发行版
 
@@ -48,8 +48,8 @@ Mac 的话直接从官网下载 dmg 文件安装就好了，总感觉 Docker 很
 
 > 由于 CentOS 6 内核太旧，Docker 和 RedHat 都不再支持，请升级您的操作系统。
 
-DaoCloud 加速器
----------------
+## DaoCloud 加速器
+------------------
 
 这个才是重点啊，没有加速器，一般的网络，这镜像简直就拉不下来！！！
 
@@ -74,7 +74,7 @@ daocloud.io/daocloud/daomonit           latest              afee7a12814f        
 
 最近搞 Docker 总是会想起 skey，一个 2014-2015 年和我支付宝来往最多的人(zha)。
 
-引用
-----
+## 引用
+------
 
 1. [https://dashboard.daocloud.io/nodes/new](https://dashboard.daocloud.io/nodes/new)
