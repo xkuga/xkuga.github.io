@@ -450,10 +450,10 @@ redis-trib.rb add-node --slave --master-id f28185a65d377e096ffbdfe7b6b58c70ceeb1
 -------------
 
 虽然容器内的网络是通的，但如果要把集群提供给外部使用，一旦发生重定向，就会失败，
-原因是外部主机和容器的网络不通。这也有相关的 <a href="https://github.com/antirez/redis/issues/2527" target="_blank">issue</a>。
+原因是外部主机和容器的网络不通，这也有相关的 <a href="https://github.com/antirez/redis/issues/2527" target="_blank">issue</a>。
 
-之前有尝试把 IP 改为外部主机的 IP，在宿舍是成功的，
-但到公司一搞，挂了，在啊里云搞，也挂了，而且挂的情况还不一样，坑爹啊。
+之前有尝试把 IP 改为外部主机的 IP，在家是成功的，
+但到别的地方一搞，挂了，而且挂的情况还不一样，坑爹啊！
 今天先写到这，以后再填，好累 XD。
 
 ## 引用
