@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker with Redis Cluster
+title: Docker 与 Redis Cluster
 date:  2016-07-22
 author: kuga
 header-img: img/docker.jpg
