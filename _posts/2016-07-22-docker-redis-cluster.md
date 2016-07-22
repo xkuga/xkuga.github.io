@@ -37,8 +37,25 @@ Reids 集群最少需要 3 个主结点才能正常工作，相当于一个环�
 但如果机器 B 挂了，那么就真的完蛋了〜，
 因为集群中两个主同时挂掉就无法进行选举，所以要是两台机器挂了，集群会有 50% 的概率撑住。
 
-## Dockerfile
--------------
+## 构建容器
+----------
+
+首先我们创建下面的目录结构。
+
+```
+redis-cluster
+├── Dockerfile
+├── redis-conf
+│   ├── 7000
+│   │   └── redis.conf
+│   ├── 7001
+│   │   └── redis.conf
+│   └── 7002
+│       └── redis.conf
+└── start.sh
+```
+
+#### Dockerfile
 
 ```bash
 FROM centos:6.8
@@ -73,13 +90,24 @@ RUN chmod 755 /start.sh
 CMD ["/bin/bash", "/start.sh"]
 ```
 
-start.sh
+#### start.sh
 
 ```bash
 cd /redis-conf/7000 && redis-server redis.conf &
 cd /redis-conf/7001 && redis-server redis.conf &
 cd /redis-conf/7002 && redis-server redis.conf &
 /bin/bash
+```
+
+#### redis.conf
+
+```
+# 找到默认的 redis.conf，然后修改以下地方，port 分别为 7000-7002
+port 7000
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
 ```
 
 Dockerfile 比较清晰，我们就直接构建容器吧。
