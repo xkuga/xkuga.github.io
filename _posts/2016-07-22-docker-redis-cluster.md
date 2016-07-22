@@ -55,8 +55,7 @@ redis-cluster
 └── start.sh
 ```
 
-##### Dockerfile
-
+Dockerfile
 
 ```bash
 FROM centos:6.8
@@ -91,8 +90,7 @@ RUN chmod 755 /start.sh
 CMD ["/bin/bash", "/start.sh"]
 ```
 
-##### start.sh
-
+start.sh
 
 ```bash
 cd /redis-conf/7000 && redis-server redis.conf &
@@ -101,8 +99,7 @@ cd /redis-conf/7002 && redis-server redis.conf &
 /bin/bash
 ```
 
-##### redis.conf
-
+redis.conf
 
 ```
 # 找到默认的 redis.conf，然后修改以下地方，port 分别为 7000-7002
