@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker 安装
+title: Docker 安装与加速
 date:  2016-07-20
 author: kuga
 header-img: img/docker.jpg
