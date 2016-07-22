@@ -110,7 +110,7 @@ docker network rm onepiece
 接着我们就可以运行 Docker 容器了。
 
 ```bash
-docker run --net onepiece --ip 10.10.10.100 -it -p 7000-7002:7000-7002 kupay/redis-cluster:v1
+docker run --net onepiece --ip 10.10.10.100 -it -p 7000-7002:7000-7002 my/redis-cluster:v1
 ```
 
 上面的意思是使用 onepiece 这个网络，并给容器分配 10.10.10.100 这个 IP。
@@ -120,13 +120,13 @@ docker run --net onepiece --ip 10.10.10.100 -it -p 7000-7002:7000-7002 kupay/red
 继续运行第二个容器，命令在 IP 和端口上有些修改，如下。
 
 ```bash
-docker run --net onepiece --ip 10.10.10.101 -it -p 7003-7005:7000-7002 kupay/redis-cluster:v1
+docker run --net onepiece --ip 10.10.10.101 -it -p 7003-7005:7000-7002 my/redis-cluster:v1
 ```
 
 第三个容器也相似。
 
 ```bash
-docker run --net onepiece --ip 10.10.10.102 -it -p 7006-7008:7000-7002 kupay/redis-cluster:v1
+docker run --net onepiece --ip 10.10.10.102 -it -p 7006-7008:7000-7002 my/redis-cluster:v1
 ```
 
 我们可以在其中一个容器内部看下是否有 3 个 redis 实例在运行。
