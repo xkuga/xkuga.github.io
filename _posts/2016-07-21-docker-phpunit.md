@@ -3,7 +3,7 @@ layout: post
 title: Docker 与 PHPUnit 单元测试
 date:  2016-07-21
 author: kuga
-header-img: img/docker.png
+header-img: img/docker.jpg
 ---
 
 如果你有写单元测试，你一定会发现随着测试的增加，测试所需要的环境会越来越复杂。
