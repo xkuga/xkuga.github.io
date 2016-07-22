@@ -63,7 +63,10 @@ Mac 的话直接从官网下载 dmg 文件安装就好了，总感觉 Docker 很
 安装完后会发现多了 DaoCloud 相关的镜像。
 
 ```
-$ docker images
+docker images
+```
+
+```
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 daocloud.io/daocloud/daocloud-toolset   latest              1ab33797d8a1        12 weeks ago        150.2 MB
 daocloud.io/daocloud/daomonit           latest              afee7a12814f        10 months ago       149 MB
