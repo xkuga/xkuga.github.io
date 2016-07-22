@@ -11,15 +11,19 @@ header-img: img/docker.jpg
 但如果把测试集成到 Docker 的容器中，大家只要拉取镜像就能跑了，是不是很方便？
 而且共同维护一份 Dockerfile 就相当于文档，既标准又清晰，想想都有点小激动！
 
-那我们就从一个具体的例子说明吧，主要分两个部分：
+那我们就从一个具体的例子说明吧，首先创建如下目录结构。
 
-1. 写一个简单的 PHPUnit 测试。
-2. 创建 Dockerfile，并运行测试。
+```
+phpunit
+├── Dockerfile
+├── RedisTest.php
+└── start.sh
+```
 
-## PHPUnit
-----------
+## RedisTest.php
+----------------
 
-这里举一个测试 Redis 的例子，保存为 RedisTest.php。
+这里举一个测试 Redis 的例子。
 
 ```php
 <?php
@@ -92,7 +96,7 @@ RUN chmod 755 /start.sh
 CMD ["/bin/bash", "/start.sh"]
 ```
 
-start.sh 的内容如下。
+start.sh
 
 ```bash
 redis-server > /dev/null &
