@@ -303,7 +303,7 @@ redis-trib.rb check 10.10.10.100:7000 | python magic.py
 ```
 
 问题很明显，就是主从被分配到了同一台容器了。
-关于这个问题，GitHub 上有相关的 <a href="https://github.com/antirez/redis/issues/2527" target="_blank">issue</a>，
+关于这个问题，GitHub 上有相关的 <a href="https://github.com/antirez/redis/issues/2204" target="_blank">issue</a>，
 issue 有点旧，我还没细看，这个除了手动配置，我现在还没找到比较方便的解决方法，留个坑。
 
 我们先简单测试一下集群，一定要加 -c，这个是集群的选项，不然无法进行重定向。
