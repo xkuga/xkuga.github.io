@@ -92,6 +92,13 @@ RUN chmod 755 /start.sh
 CMD ["/bin/bash", "/start.sh"]
 ```
 
+start.sh 的内容如下。
+
+```bash
+redis-server > /dev/null &
+/vendor/phpunit/phpunit/phpunit RedisTest.php
+```
+
 该说的上面已经有注释了，
 这里要注意的是 Ubuntu 和 Composer 换成了国内的源，不然基本上跑不动。
 然后把 Dockerfile 和 RedisTest.php 放到同一个目录，在该目录下运行以下命令创建镜像。
