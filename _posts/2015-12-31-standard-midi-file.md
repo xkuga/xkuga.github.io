@@ -363,7 +363,7 @@ SMF = <header_chunk> + <track_chunk> [+ <track_chunk> ...]
 另外在编写完「音乐数据」后，要记得更新 Track 头的「音轨剩余字节数」的值。
 
 把上面的值写到文件中，名为 **hello.mid**。
-(这里有一个[小工具](https://github.com/xkuga/hello-midi)，可以在线生成 mid 文件)
+(这里有一个<a href="https://github.com/xkuga/hello-midi" target="_blank">小工具</a>，可以在线生成 mid 文件)
 
 Windows 默认是可以直接播放 mid 文件的。
 如果你使用 Ubuntu，可以安装 timidity 来播放 MIDI 文件，命令如下:
@@ -522,5 +522,5 @@ Track 0 是消音，Track 1 是旋律，Track 2 是分解和弦。
 ## Reference
 ------------
 
-1. [http://www.skytopia.com/project/articles/midi.html](http://www.skytopia.com/project/articles/midi.html)
-2. [http://www.music-software-development.com/midi-tutorial.html](http://www.music-software-development.com/midi-tutorial.html)
+1. <a href="http://www.skytopia.com/project/articles/midi.html" target="_blank">http://www.skytopia.com/project/articles/midi.html</a>
+2. <a href="http://www.music-software-development.com/midi-tutorial.html" target="_blank">http://www.music-software-development.com/midi-tutorial.html</a>

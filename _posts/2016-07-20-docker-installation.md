@@ -78,4 +78,4 @@ daocloud.io/daocloud/daomonit           latest              afee7a12814f        
 ## 引用
 ------
 
-1. [https://dashboard.daocloud.io/nodes/new](https://dashboard.daocloud.io/nodes/new)
+1. <a href="https://dashboard.daocloud.io/nodes/new" target="_blank">https://dashboard.daocloud.io/nodes/new</a>
