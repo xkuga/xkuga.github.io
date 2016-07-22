@@ -3,6 +3,7 @@ layout: post
 title: Docker 安装
 date:  2016-07-20
 author: kuga
+header-img: img/docker.png
 ---
 
 一直以来，安装和配置环境都是很费时间的，虽然大多是重复的劳动，

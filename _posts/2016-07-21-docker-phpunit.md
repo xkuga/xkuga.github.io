@@ -3,6 +3,7 @@ layout: post
 title: Docker 与 PHPUnit 单元测试
 date:  2016-07-21
 author: kuga
+header-img: img/docker.png
 ---
 
 如果你有写单元测试，你一定会发现随着测试的增加，测试所需要的环境会越来越复杂。
@@ -121,4 +122,3 @@ docker run my/phpunit:v1
 这突然让我想起了当初教我写单元测试的那个人 :)
 
 好吧，我们下期 Redis 3.0 集群再见〜
-
