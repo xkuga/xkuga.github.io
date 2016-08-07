@@ -5,7 +5,7 @@ date:  2016-08-07
 author: kuga
 ---
 
-最近发现用 Worepress 搭建的博客响应很慢，特别是后台，TTFB(Time To First Byte) 时间很长。
+最近发现用 Wordpress 搭建的博客响应很慢，特别是后台，TTFB(Time To First Byte) 时间很长。
 这个 TTFB 其实就是 PHP 代码的执行时间，后来结合使用 XHProf 和 XHGui 分析之后，
 发现这些都是由 WP_Http_Streams::request 这个函数造成的，如下图。
 
@@ -47,7 +47,7 @@ add_filter('automatic_updater_disabled', '__return_true');
 ## Docker
 ---------
 
-这次也用 Docker 搭建了 Ｗordpress 和 XHGui，源码在 GitHub，下面主要说一下碰到的一些问题。
+这次也用 Docker 搭建了 Ｗordpress 和 XHGui，源码在<a href="https://github.com/xkuga/docker-wordpress-xhgui" target="_blank">这里</a>，下面主要说一下碰到的问题。
 
 #### 环境变量问题
 
