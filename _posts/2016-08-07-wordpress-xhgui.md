@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wordpress x XHGui 性能分析
+title: Wordpress XHProf XHGui 性能分析
 date:  2016-07-22
 author: kuga
 ---
@@ -49,7 +49,7 @@ add_filter('automatic_updater_disabled', '__return_true');
 
 这次也用 Docker 搭建了 Ｗordpress 和 XHGui，源码在 GitHub，下面主要说一下碰到的一些问题。
 
-##### 环境变量问题
+**环境变量问题**
 
 这次是通过 docker-compose 去连接 mysql 和 mongodb 的，所以容器中会自动包含相应的环境变量。
 本来是打算在 wp-config.php 中使用 getenv 来获取环境变量的，但失败了。
@@ -88,7 +88,7 @@ Since PHP 5.4.27, 5.5.11, and 5.6.0. Default value: Yes.
 
 关于这个问题，GitHub 中也有相关的 [issue](https://github.com/docker-library/php/issues/74)
 
-##### docker-compose no such image
+**docker-compose no such image**
 
 docker-compose up 的时候，明明镜像是存在的，但他还是提示 no such image。
 这是因为，他引用到了那些之前被删除的镜像，运行下面这个命令可以解决。
