@@ -9,7 +9,7 @@ author: kuga
 这个 TTFB 其实就是 PHP 代码的执行时间，后来结合使用 XHProf 和 XHGui 分析之后，
 发现这些都是由 WP_Http_Streams::request 这个函数造成的，如下图。
 
-![xhgui](/img/xhgui.png)
+![xhgui](/img/xhgui.jpg)
 
 加了日志发现，这些都是 Wordpress 和插件相关的更新请求。
 
