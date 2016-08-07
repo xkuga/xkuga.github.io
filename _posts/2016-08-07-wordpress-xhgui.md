@@ -86,7 +86,7 @@ Since PHP 5.4.27, 5.5.11, and 5.6.0. Default value: Yes.
 但由于这个可能会有安全问题，所以我改为在 entrypoint.sh 脚本处理。
 虽然可能不是 Best Practice，但至少 It works!
 
-关于这个问题，GitHub 中也有相关的 <a href="https://github.com/docker-library/php/issues/74" target="_blank">issue</a>
+关于这个问题，GitHub 中也有相关的 <a href="https://github.com/docker-library/php/issues/74" target="_blank">issue</a>。
 
 #### docker-compose no such image
 
@@ -97,7 +97,7 @@ docker-compose up 的时候，明明镜像是存在的，但他还是提示 no s
 docker-compose rm
 ```
 
-关于这个问题，GitHub 中也有相关的 <a href="https://github.com/docker/compose/issues/1113" target="_blank">issue</a>
+关于这个问题，GitHub 中也有相关的 <a href="https://github.com/docker/compose/issues/1113" target="_blank">issue</a>。
 
 ## 引用
 ------
