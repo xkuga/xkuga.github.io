@@ -11,9 +11,16 @@ author: kuga
 
 ![xhgui](/img/xhgui.jpg)
 
-加了日志发现，这些都是 Wordpress 和插件相关的更新请求。
+加了日志发现，这些都是 Wordpress 自身和插件相关的更新请求。
 
 ```
+Array
+(
+    [uri] => /
+    [req] => /wp-cron.php?doing_wp_cron=1470966633.8375670909881591796875
+    [cost] => 4.0049130916595
+    [date] => 2016-08-12 01:50:37
+)
 Array
 (
     [uri] => /wp-cron.php?doing_wp_cron=1470375031.1464920043945312500000
@@ -40,6 +47,7 @@ Array
 在 wp-config.php 添加下面的代码后(关闭更新)，TTFB 平均为 0.2~0.3 秒。
 
 ```php
+define('DISABLE_WP_CRON', true);
 define('AUTOMATIC_UPDATER_DISABLED', true);
 add_filter('automatic_updater_disabled', '__return_true');
 ```
