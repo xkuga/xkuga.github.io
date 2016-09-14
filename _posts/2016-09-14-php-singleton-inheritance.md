@@ -12,6 +12,8 @@ author: kuga
 网上(某度)最常见的实现方式如下。
 
 ```php
+<?php
+
 class A
 {
     public static $instance = null;
@@ -55,6 +57,8 @@ var_dump($b === $c);  // return false
 第一页就会有答案了，我是在 Stack Overflow 里看到的，这里直接贴一下代码好了。
 
 ```php
+<?php
+
 abstract class Singleton
 {
     protected function __construct()
